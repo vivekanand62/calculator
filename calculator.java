@@ -1,9 +1,11 @@
 public class calculator {
     float num1;
     float num2;
-    calculator(float num1, float num2) {
+    float n;
+    calculator(float num1, float num2,float n) {
         this.num1 = num1;
         this.num2 = num2;
+        this.n = n;
     }
     float add() {
         return num1+num2;
@@ -22,11 +24,19 @@ public class calculator {
             return num1;
         }
     }
+    float square() {
+        return n*n;
+    }
+    float cube() {
+        return n*n*n;
+    }
     public static void main(String[] args) {
-        calculator calculator = new calculator(10, 5);
+        calculator calculator = new calculator(10, 5,6);
         System.out.println("Addition: " + calculator.add());
         System.out.println("Subtraction: " + calculator.subtract());
         System.out.println("Multiplication: " + calculator.multiply());
         System.out.println("Division: " + calculator.divide());
+        System.out.println("Square of number is:"+calculator.square());
+        System.out.println("Cube of number is:"+calculator.cube());
     }
 }
